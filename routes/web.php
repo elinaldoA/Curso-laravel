@@ -16,14 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/contato/{id?}', function ($id = null) {
-    return "contato id = $id";
-});
-Route::post('/contato', function () {
-    dd($_POST);
-    return "contato POST";
-});
-Route::put('/contato', function () {
-    
-    return "contato PUT";
-});
+
+Route::get('/contato/{id?}',['uses'=>'App\Http\Controllers\ContatoController@index']);
+
+Route::post('/contato', ['uses'=>'App\Http\Controllers\ContatoController@criar']);
+
+Route::put('/contato', ['uses'=>'App\Http\Controllers\ContatoController@editar']);
+
