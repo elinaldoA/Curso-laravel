@@ -23,3 +23,16 @@ Route::post('/contato', ['uses'=>'App\Http\Controllers\ContatoController@criar']
 
 Route::put('/contato', ['uses'=>'App\Http\Controllers\ContatoController@editar']);
 
+//Definindo apelido para as rotas
+Route::get('/admin/cursos', ['as'=>'admin.cursos','uses'=>'App\Http\Admin\CursosController@index']);
+//Adcionar novos
+Route::get('/admin/cursos/adicionar', ['as'=>'admin.cursos.adicionar','uses'=>'App\Http\Admin\CursosController@adicionar']);
+//Salvar 
+Route::post('/admin/cursos/salvar', ['as'=>'admin.cursos.salvar','uses'=>'App\Http\Admin\CursosController@salvar']);
+//Editar
+Route::get('/admin/cursos/editar/{id}', ['as'=>'admin.cursos.editar','uses'=>'App\Http\Admin\CursosController@editar']);
+//Atualizar
+Route::get('/admin/cursos/atualizar/{id}', ['as'=>'admin.cursos.atualizar','uses'=>'App\Http\Admin\CursosController@atualizar']);
+//Deletar
+Route::get('/admin/cursos/deletar/{id}', ['as'=>'admin.cursos.deletar','uses'=>'App\Http\Admin\CursosController@deletar']);
+
