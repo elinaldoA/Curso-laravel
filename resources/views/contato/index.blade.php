@@ -1,17 +1,14 @@
-<html>
+@extends('Layouts.site')
 
-<head>
-    <title>Curso de laravel</title>
-</head>
+@section('titulo','Contatos')
 
-<body>
-    <h3>Essa é a view Index</h3>
 
-    @foreach($contatos as $contato)
+@section('conteudo')
+<h3>Essa é a view Index</h3>
+
+@foreach($contatos as $contato)
     <p>{{$contato->nome}}</p>
     <p>{{$contato->tel}}</p>
+@endforeach
 
-    @endforeach
-</body>
-
-</html>
+@endsection

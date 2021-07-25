@@ -1,11 +1,10 @@
-<html>
 
-<head>
-    <title>Curso de laravel</title>
-</head>
 
-<body>
+@include('Layouts._includes.topo')
+
+
+@yield('conteudo')
+
+
+@include('Layouts._includes.footer')
     
-</body>
-
-</html>
