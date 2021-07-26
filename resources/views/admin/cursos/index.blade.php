@@ -38,4 +38,5 @@
     <div class="row">
     <a class="btn blue" href="{{route('admin.cursos.adicionar')}}">Adicionar</a>
     </div>
+</div>
 @endsection
